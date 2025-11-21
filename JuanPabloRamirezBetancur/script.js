@@ -70,3 +70,82 @@ let aprobadas = notas.filter((nota) => nota >= 6);
 console.log(notas);
 console.log(aprobadas);
 
+
+
+
+/*   Ejercicio 4: Productos en Stock (filter con objetos)
+Inicias con un inventario:
+let productos = [{nombre: "Camisa", stock: 10}, {nombre: "Zapatos", stock: 0}, {nombre: "Pantalón", stock: 5}];
+
+Tareas:
+1.  Crea un nuevo arreglo enStock que contenga solo los productos cuyo stock sea mayor que 0.
+
+---
+   */
+
+let productos = [
+    { nombre: "Camisa", stock: 10 },
+    { nombre: "Zapatos", stock: 0 },
+    { nombre: "Pantalón", stock: 5 },
+];
+
+// Crea un nuevo arreglo enStock que contenga solo los productos cuyo stock sea mayor que 0.
+
+let enStock = productos.filter((productos) => productos.stock > 0);
+
+console.log(productos);
+console.log(enStock);
+
+
+
+
+
+/*   Ejercicio 5: Suma Total de Ventas (reduce)
+Inicias con una lista de ventas del día:
+let ventas = [150, 300, 100, 50];
+
+Tareas:
+1.  Calcula el valor totalVentas sumando todos los elementos del arreglo usando reduce.
+
+---
+
+*/
+
+let ventas = [150, 300, 100, 50];
+
+// Calcula el valor totalVentas sumando todos los elementos del arreglo usando reduce.
+
+let totalVentas = ventas.reduce((acumulador, venta) => {
+    return acumulador + venta;
+}, 0);
+
+console.log(ventas);
+console.log(totalVentas);
+
+
+
+
+
+/*   Ejercicio 6: Aplanar un Arreglo (reduce)
+Inicias con una lista de listas:
+let grupos = [["Ana", "Luis"], ["Maria", "Juan"], ["Pedro"]];
+
+Tareas:
+1.  Crea un nuevo arreglo listaPlana que contenga todos los nombres en un solo nivel (ej: ["Ana", "Luis", "Maria", "Juan", "Pedro"]). (Pista: reduce puede usar concat).
+
+---   */
+
+let grupos = [
+    ["Ana", "Luis"],
+    ["Maria", "Juan"],
+    ["Pedro"]
+];
+
+// Crea un nuevo arreglo listaPlana que contenga todos los nombres en un solo nivel (ej: ["Ana", "Luis", "Maria", "Juan", "Pedro"]). (Pista: reduce puede usar concat).
+
+let listaPlana = grupos.reduce(function(acumulador, grupo) {
+    return acumulador.concat(grupo);
+}, []);
+
+console.log(grupos);
+console.log(listaPlana);
