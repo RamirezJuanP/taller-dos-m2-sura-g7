@@ -326,13 +326,16 @@ console.log(invitados);
 console.log(invitadosOrdenados);
 
 
-/*    Ejercicio 14: Invertir sin Mutar (Copia + reverse)
+
+
+
+/*   ## Ejercicio 14: Invertir sin Mutar (Copia + reverse)
 Inicias con los pasos de una receta:
-let receta = ["Paso 1", "Paso 2", "Paso 3"];
+`let receta = ["Paso 1", "Paso 2", "Paso 3"];`
 
 Tareas:
-1.  Crea un nuevo arreglo recetaInversa. (Pista: [...receta].reverse()).
-2.  Verifica que receta sigue en el orden original.
+1.  Crea un nuevo arreglo `recetaInversa`. (Pista: `[...receta].reverse()`).
+2.  Verifica que `receta` sigue en el orden original.
 
 ---
    */
@@ -340,6 +343,69 @@ Tareas:
 let receta = ["Paso 1", "Paso 2", "Paso 3"];
 
 
-// Crea un nuevo arreglo recetaInversa. (Pista: [...receta].reverse()).
+// Crea un nuevo arreglo `recetaInversa`. (Pista: `[...receta].reverse()`).
 
-// Crea un nuevo arreglo recetaInversa. (Pista: [...receta].reverse()).
+let recetaInversa = [...receta].reverse();
+
+// Verifica que `receta` sigue en el orden original.
+
+console.log(receta);
+console.log(recetaInversa);
+
+
+
+
+
+/*   ## Ejercicio 15: Eliminar sin Mutar (filter)
+Inicias con una fila:
+`let fila = ["Ana", "Luis", "Carlos", "Maria"];`
+
+Tareas:
+1.  "Luis" (índice 1) se va. Crea una `nuevaFila` sin Luis, usando `filter()`. (Pista: filtra por índice o por nombre).
+2.  Verifica que `fila` original sigue teniendo a "Luis".
+
+---
+  */
+
+let filas = ["Ana", "Luis", "Carlos", "Maria"];
+
+// "Luis" (índice 1) se va. Crea una `nuevaFila` sin Luis, usando `filter()`. (Pista: filtra por índice o por nombre).
+
+let nuevaFila = filas.filter((persona) => persona != "Luis")
+
+// Verifica que `fila` original sigue teniendo a "Luis".
+
+console.log(filas);
+console.log(nuevaFila);
+
+
+
+
+
+/*  
+
+ Ejercicio 16: Insertar sin Mutar (slice + spread)
+Inicias con la misma fila:
+`let fila = ["Ana", "Luis", "Carlos", "Maria"];`
+
+Tareas:
+1.  "Jorge" (nuevo) se cuela después de "Ana" (en el índice 1). Crea una `nuevaFilaConJorge` usando `slice` y el operador *spread*
+(`...`) para insertarlo.
+2.  (Pista: `[...fila.slice(0, 1), "Jorge", ...fila.slice(1)]`)
+3.  Verifica que `fila` original no tiene a "Jorge".
+
+---
+
+*/
+
+let fila = ["Ana", "Luis", "Carlos", "Maria"];
+
+// "Jorge" (nuevo) se cuela después de "Ana" (en el índice 1). Crea una `nuevaFilaConJorge` usando `slice` y el operador *spread* (`...`) para insertarlo.
+// (Pista: `[...fila.slice(0, 1), "Jorge", ...fila.slice(1)]`)
+
+let nuevaFilaConJorge = [...fila.slice(0, 1), "Jorge", ...fila.slice(1)];
+
+// Verifica que `fila` original no tiene a "Jorge".
+
+console.log(fila);
+console.log(nuevaFilaConJorge);
