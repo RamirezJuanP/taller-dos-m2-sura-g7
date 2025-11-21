@@ -271,3 +271,56 @@ let rolEditor = roles.includes("EDITOR")
 console.log(roles);
 console.log(rolUsuario);
 console.log(rolEditor);
+
+
+
+
+/*    Ejercicio 12: Encontrar Usuario (find)
+Inicias con la lista de usuarios:
+let usuarios = [{id: 101, nombre: "Ana"}, {id: 102, nombre: "Luis"}, {id: 103, nombre: "Carlos"}];
+
+Tareas:
+1.  Encuentra el objeto completo del usuario cuyo id es 102. Guarda el resultado en usuarioLuis.
+
+--- */
+
+
+let usuarios = [
+    { id: 101, nombre: "Ana" },
+    { id: 102, nombre: "Luis" },
+    { id: 103, nombre: "Carlos" }
+];
+
+// Encuentra el objeto completo del usuario cuyo id es 102. Guarda el resultado en usuarioLuis.
+
+let usuarioLuis = usuarios.find(function(usuario) {
+    return usuario.id === 102;
+});
+
+
+console.log(usuarioLuis);
+
+
+
+
+/*    Ejercicio 13: Ordenar sin Mutar (Copia + sort)
+Inicias con una lista de invitados desordenada:
+let invitados = ["Zapata", "Alvarez", "Gomez", "Bernal"];
+
+Tareas:
+1.  Crea un nuevo arreglo invitadosOrdenados ordenando la lista. *Importante: ¡No mutes el original!* (Pista: [...invitados].sort()).
+2.  Muestra invitados para verificar que sigue en el orden original.
+
+---   */
+
+let invitados = ["Zapata", "Alvarez", "Gomez", "Bernal"];
+
+// Crea un nuevo arreglo invitadosOrdenados ordenando la lista. *Importante: ¡No mutes el original!* (Pista: [...invitados].sort()).
+
+
+let invitadosOrdenados = [...invitados].sort();
+
+// Muestra invitados para verificar que sigue en el orden original.
+
+console.log(invitados);
+console.log(invitadosOrdenados);
